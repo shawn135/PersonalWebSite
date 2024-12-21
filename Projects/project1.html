@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1: High-Availability Web App</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Terraform Highly Scalable Web Applicatione</h1>
+    </header>
+    <section>
+        <h2>Overview</h2>
+        <p>Developed a scalable, secure web application infrastructure using AWS, Terraform, and Auto Scaling Groups.</p>
+        <h2>Details</h2>
+        <ul>
+            <li>Infrastructure as Code (IaC): Fully automated deployment using Terraform. Modular design for EC2 and VPC components</li>
+            <li>High Availability: EC2 instances distributed across multiple availability zones. Auto-scaling based on demand.</li>
+            <li>Load Balancing: Application Load Balancer ensures traffic distribution. Target group with health checks to maintain reliability.</li>
+            <li>Dynamic Scaling: Supports manual or automatic scaling based on CPU or other metrics.</li>
+        </ul>
+        <h2>Architecture Diagram</h2>
+        <ul>
+            <li>User → API Gateway → Lambda Functions / ECS Services. API Gateway routes requests based on endpoint configuration</li>
+            <li>Static Content Delivery: User → CloudFront CDN → S3 Bucket. CloudFront accelerates content delivery by caching static assets.</li>
+            <li>Backend Interactions: Lambda Functions ↔ ECS (for microservices). ECS ↔ RDS MySQL (for transactional data storage).</li>
+            <li>Networking: Requests flow through public subnets to ALB. ECS and RDS exist in private subnets for security. Security Groups enforce restricted access between components.</li>
+    </section>
+    <body class="project-page">
+</body>
+</html>

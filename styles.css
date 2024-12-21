@@ -1,0 +1,302 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #6200ea, #3700b3);
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    background: #3700b3;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700; /* Change color on hover */
+    transform: scale(1.1); /* Slightly grow */
+}
+
+
+/* Section Styling */
+section {
+    padding: 4rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #6200ea;
+}
+
+section p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Project Cards */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: #f3f4fa !important; /* Force the background color */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: #ffffff !important; /* Keep hover effect */
+}
+
+
+
+
+ul li strong {
+    font-size: 1.3rem;
+    color: #3700b3;
+}
+
+ul li p {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background: #6200ea;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+/* Fade-in animation */
+section {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Resume Section */
+.resume-section {
+    margin: 2rem auto;
+    max-width: 800px;
+    background: #f9f9fc; /* Light background for resume */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section h3 {
+    color: #6200ea;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.resume-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume-section ul li {
+    text-align: center; /* Center-align job titles */
+}
+
+.resume-section ul li strong {
+    display: block; /* Ensure job titles take a full line */
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem; /* Slightly larger font for emphasis */
+    color: #3700b3; /* Highlight job titles */
+}
+
+
+/* Skills Section Text */
+.resume-section ul li {
+    color: #000; /* Make text fully black */
+    font-weight: bold; /* Bold text for better visibility */
+    font-size: 1.1rem; /* Increase font size slightly */
+    line-height: 1.5; /* Add spacing between lines for readability */
+}
+
+/* Optional: Skills List-Specific Styling */
+.resume-section ul {
+    list-style-type: disc; /* Add bullet points to skills */
+    margin-left: 1.5rem; /* Indent bullets for clarity */
+}
+/* Highlight Skills Section */
+.resume-section ul {
+    background: #f3f4fa; /* Light lavender background */
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Default hidden state for sections */
+section {
+    opacity: 0; /* Fully hidden initially */
+    transform: translateY(20px); /* Positioned slightly downward */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Fully visible state */
+section.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+}
+
+
+/* Additional section styling */
+section {
+    padding: 4rem;
+    text-align: center;
+    background: #f3f4fa; /* Optional background for better contrast */
+    border-radius: 8px;
+}
+
+
+.btn {
+    background: #6200ea;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffd700; /* Change to gold on hover */
+    color: #333;
+    transform: scale(1.05); /* Slightly grow on hover */
+}
+
+
+#contact p a {
+    color: #3700b3; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make it stand out */
+}
+
+#contact p a:hover {
+    color: #6200ea; /* Highlight on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+#projects {
+    padding: 2rem;
+    background: #f3f4fa;
+}
+
+#projects h2 {
+    text-align: center;
+    color: #6200ea;
+    margin-bottom: 1.5rem;
+}
+
+.project-teasers article {
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.project-teasers article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-teasers article h3 a {
+    color: #3700b3;
+    text-decoration: none;
+}
+
+.project-teasers article h3 a:hover {
+    color: #6200ea;
+}
+
+.project-teasers article p {
+    color: #333;
+}
+
+/* Disable animation for project pages */
+body.project-page section {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* No movement */
+    transition: none; /* No transition */
+}
+
+
